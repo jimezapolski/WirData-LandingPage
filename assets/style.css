@@ -1,0 +1,695 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*scrol*/
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --White: #ffffff;
+  --Primary: #15244d;
+  --VariableColor: #3283c1;
+}
+/* body */
+body {
+  font-family: "Poppins", sans-serif !important;
+  line-height: 1.5;
+  text-align: left;
+  background: var(--Primary) !important;
+}
+/* todos los h2 y su animacion */
+h2 {
+  color: var(--White, #fff) !important;
+  text-align: center;
+  font-size: 2.3em !important;
+  font-weight: 700;
+}
+
+h2 {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+h2 {
+  background: 50% 100%/50% 50% no-repeat
+    radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 10vw;
+  font-family: "Poppins", sans-serif;
+  -webkit-animation: reveal 4000ms ease-in-out forwards 400ms,
+    linear infinite 2000ms;
+  animation: reveal 4000ms ease-in-out forwards 400ms, linear infinite 2000ms;
+}
+@-webkit-keyframes reveal {
+  80% {
+    letter-spacing: 6px;
+  }
+  100% {
+    background-size: 200% 200%;
+  }
+}
+@keyframes reveal {
+  80% {
+    letter-spacing: 6px;
+  }
+  100% {
+    background-size: 200% 200%;
+  }
+}
+@-webkit-keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
+}
+@keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
+}
+
+/*todos los containers*/
+.container {
+  padding: 4em !important;
+  margin-bottom: 5em !important;
+}
+
+/*todos los botones - animacion*/
+button:hover {
+  background-color: var(--Primary) !important;
+  border: var(--Primary);
+  color: var(--White) !important;
+  animation: showup 2s;
+}
+
+button:after {
+  display: block;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: ".";
+  color: transparent;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: transparent;
+}
+button:hover:after {
+  -webkit-animation: circle 1.1s ease-in forwards;
+}
+
+/* navbar */
+.navbar {
+  background: var(--White, #fff);
+  box-shadow: 0px 10px 50px 0px rgba(21, 36, 77, 0.67);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-brand {
+  padding-left: 6em !important;
+}
+.navbar-collapse {
+  padding-right: 6em !important;
+  justify-content: flex-end;
+}
+.navbar li {
+  padding: 0.5em;
+  display: inline;
+}
+.navbar ul li a {
+  display: block;
+  color: var(--Primary) !important;
+  font-size: 1.225em;
+  font-weight: 400;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+/* animacion */
+.navbar ul li a:hover {
+  color: var(--White) !important;
+}
+
+.navbar ul li a:after {
+  display: block;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: ".";
+  color: transparent;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: transparent;
+}
+.navbar ul li a:hover:after {
+  -webkit-animation: circle 1.1s ease-in forwards;
+}
+/* Keyframes */
+@-webkit-keyframes circle {
+  0% {
+    width: 1px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    z-index: -1;
+    background: var(--Primary);
+    border-radius: 100%;
+  }
+  100% {
+    background: var(--Primary);
+    height: 5000%;
+    width: 5000%;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 0;
+  }
+}
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+.navbar-toggler-icon {
+  background-color: var(--Primary);
+}
+/* fin navbar */
+
+/* hero */
+.hero {
+  text-align: center;
+  background-image: url("./img/hero.png");
+  height: 552px;
+  width: 100vw;
+}
+
+.hero h1 {
+  margin: 0 auto;
+  padding-top: 2em;
+  padding-bottom: 0.4em;
+  display: inline-block;
+  animation: showup 15s infinite;
+  color: var(--White);
+  font-weight: 400;
+  font-size: 2.8em !important;
+}
+
+.hero h1 span {
+  font-weight: 700;
+}
+
+.hero button {
+  background-color: var(--White, #fff);
+  box-shadow: 0px 10px 50px rgba(0, 59, 121, 0.07);
+  width: 21em;
+  height: 4em;
+  border-radius: 20px;
+  border-color: var(--White);
+  text-align: center;
+  color: var(--Primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 3em !important;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+/* animación */
+.hero button:hover {
+  background-color: rgba(255, 255, 255, 0.758);
+  color: #15244dd1;
+}
+/* keyframe */
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* fin hero */
+
+/* degrade de fondo 1 */
+.degrade1 {
+  width: 100vw;
+  height: 119em;
+  background: linear-gradient(
+    180deg,
+    rgba(57, 125, 170, 0.5) 00%,
+    rgba(43, 90, 134, 0.8) 71.88%,
+    rgba(21, 36, 77, 0.8) 100%
+  );
+}
+
+/* negocios */
+.negocios {
+  padding: 8em 6em !important;
+}
+.negocios .card {
+  max-width: 1197px;
+  background-color: var(--White);
+  box-shadow: 0px 10px 50px rgba(0, 59, 121, 0.07);
+  border-radius: 20px;
+  height: 513px;
+  padding: 2em 4em !important;
+  align-items: center;
+}
+.img-card {
+  padding-top: 05em !important;
+  animation: showup 45s infinite;
+}
+
+.card-body {
+  color: var(--Primary);
+  padding: 3em !important;
+}
+
+.card-title {
+  color: var(--Primary, #15244d);
+  text-align: center;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.card-text li {
+  list-style-type: none;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 400;
+  padding: 0.8em !important;
+}
+
+/* fin de negocios */
+
+/* degrade de fondo 2 */
+.degrade2 {
+  width: 100vw;
+  height: 96em;
+  background: linear-gradient(
+    180deg,
+    rgba(21, 36, 77, 0.8) 0%,
+    rgba(43, 90, 134, 0.8) 71.88%,
+    rgba(57, 125, 170, 0.8) 100%
+  );
+}
+/* nosotros */
+.nosotros {
+  margin-top: 6em !important;
+}
+
+#card-nosotros {
+  display: flex;
+  justify-content: center;
+}
+
+#card-nosotros .card-title {
+  text-align: initial !important;
+  font-size: 1.5em !important;
+}
+
+#card-nosotros .card-text {
+  font-size: 1em;
+}
+.nosotros .card {
+  border-radius: 20px;
+  width: 30em;
+  height: 14em;
+  margin: 3em 8em;
+  flex-direction: row !important;
+  padding: 2em;
+}
+
+.nosotros .card img {
+  animation: showup 45s infinite;
+  width: 115px;
+  height: 116.53px;
+}
+#card-nosotros .card {
+  display: flex;
+  align-items: center;
+}
+
+/* fin nosotros */
+
+/* fin beneficios */
+#beneficios {
+  margin-top: 5em !important;
+}
+
+.beneficios {
+  background-image: url("./img/beneficiosFondo.png");
+  border-radius: 20px;
+  height: 442.815px;
+  width: 1192.067px;
+  margin: 0 auto;
+}
+
+.beneficios-card {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    400px
+  );
+  grid-gap: 10px; 
+  grid-template-rows: 389px; 
+  margin-top: 4em;
+  text-align: center;
+  padding-top: 6em;
+}
+
+.beneficios-card img {
+  margin: 3em;
+  width: 115px;
+  height: 115px;
+  animation: showup 45s infinite;
+}
+
+.beneficios-card h3 {
+  color: var(--Primary, #15244d);
+  font-size: 2em;
+  font-weight: 600;
+  animation: showup 45s infinite;
+}
+
+.beneficios-card > div:nth-child(1),
+.beneficios-card > div:nth-child(3) {
+  border-radius: 20px !important;
+  width: 326px;
+  height: 343px;
+  background-color: #ffffff54;
+  box-shadow: 0px 10px 50px rgba(0, 59, 121, 0.07);
+}
+
+.beneficios-card > div:nth-child(2) {
+  width: 469px;
+  border-radius: 20px !important;
+  height: 375px;
+  background-color: #ffffff54;
+  box-shadow: 0px 10px 50px rgba(0, 59, 121, 0.07);
+  z-index: 3;
+  margin-top: -2em;
+}
+.beneficios-card > div:nth-child(1) {
+  margin-left: 6em;
+}
+.beneficios-card > div:nth-child(3) {
+  margin-left: 3em;
+}
+/* fin beneficios */
+
+/* degrade de fondo 3 */
+.degrade3 {
+  width: 100vw;
+  height: 47.25em;
+  background: linear-gradient(
+    180deg,
+    rgba(57, 125, 170, 0.8) 0%,
+    rgba(21, 36, 77, 0.8) 100%
+  );
+}
+
+/* contacto */
+.contacto {
+  text-align: center;
+}
+.contacto h4 {
+  margin-top: 1.5em;
+  color: var(--White);
+  font-size: 1.75em !important;
+  font-weight: 300;
+}
+.contacto form {
+  margin-top: 3em !important;
+}
+.contacto form ::placeholder {
+  color: var(--Primary);
+  font-size: 1em;
+  width: 488px;
+  height: 71px;
+  font-weight: 300;
+}
+form button {
+  margin-top: 2em;
+  background-color: var(--White, #fff);
+  box-shadow: 0px 10px 50px rgba(0, 59, 121, 0.07);
+  border-radius: 20px;
+  width: 21em;
+  height: 4em;
+  font-size: 1em;
+  color: var(--Primary);
+  font-size: 1em;
+  font-weight: 300;
+  border-color: var(--White);
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.contacto #nombre,
+#email,
+#telefono {
+  width: 30em;
+  height: 4em;
+  margin-bottom: 2em;
+  border-radius: 20px;
+}
+.contacto #mensaje {
+  width: 38em;
+  height: 16em;
+  border-radius: 20px;
+  margin-bottom: 2em !important;
+}
+/* fin contacto */
+
+/* footer */
+.mi-footer {
+  background: var(--White, #fff);
+  box-shadow: 0px -9px 30px 0px #15244d;
+  width: 100%;
+  height: 25em;
+  margin-top: 4em !important;
+  text-align: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mi-footer .card {
+  height: 10em;
+  border: none;
+  margin: 0;
+}
+
+.mi-footer img {
+  display: block;
+}
+
+.mi-footer h3 {
+  color: var(--Primary, #15244d);
+  font-size: 1.625em;
+  font-weight: 600;
+}
+
+.mi-footer p {
+  color: var(--Background, #848e96);
+  font-size: 1em;
+
+  font-weight: 400;
+  margin-top: 5px;
+}
+.mi-footer .container .row {
+  flex-direction: row;
+}
+.mi-footer .container .col-md-4 {
+  width: auto; 
+}
+/* fin footer */
+
+
+
+/* media */
+@media (max-width: 990px) {
+  .degrade1 {
+    height: 120em !important;
+  }
+  .degrade2 {
+    margin-top: 8em !important;
+    height: 140em !important;
+  }
+  .degrade3 {
+    height: 80em !important;
+  }
+  /* navbar */
+  .navbar-brand img {
+    width: 100px;
+    height: 33px;
+  }
+  .navbar-collapse {
+    background-color: var(--White);
+    padding: 1em;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--Primary);
+    padding-left: -4em !important;
+  }
+
+  .navbar-collapse ul.navbar-nav {
+    flex-direction: column;
+  }
+
+  .navbar-collapse ul.navbar-nav li.nav-item {
+    margin: 0.5em 0;
+  }
+
+  /* hero */
+  .hero {
+    height: auto;
+    padding: 1em;
+  }
+
+  .hero h1 {
+    font-size: 1.8em !important;
+    margin-bottom: 0.8em;
+  }
+
+  .hero button {
+    width: 210px;
+    height: 42px;
+    font-size: 0.6em !important;
+  }
+
+
+  /* negocios */
+  .negocios {
+    margin-bottom: 10em !important;
+    padding: 5em 0em !important;
+  }
+  
+  #nosotros {
+    margin-top: 20em !important;
+  }
+  h2 {
+    font-size: 1.5em !important;
+    margin: 0 auto;
+  }
+  .negocios .card {
+    width: 355px;
+    height: 609px;
+    padding: 0 !important;
+    margin: 0 auto;
+  }
+  .card .row {
+    flex-direction: column-reverse;
+  }
+
+  .card .col-md-6 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card .col-md-6 img {
+    width: 278px;
+    height: 211px;
+    margin: 0 auto;
+  }
+
+  .card-title {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+  }
+  .card-body {
+    margin-bottom: 0.2em;
+  }
+
+  .card-text li {
+    font-size: 0.8em;
+    padding: 0.3em 0;
+  }
+  /* beneficios */
+  .beneficios {
+    background-image: none;
+  }
+
+  .beneficios-card {
+    background-image: url("./img/fondo-responsive.png");
+    padding-left: 1em;
+    width: 100vw;
+    height: 600px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 1em !important;
+  }
+
+  .beneficios-card > div {
+    height: 10em !important;
+    background-color: transparent !important;
+    text-align: center;
+    padding: 1em;
+    margin-left: 0;
+  }
+  .beneficios-card > div:nth-child(2) {
+    text-align: center;
+  }
+
+  .beneficios-card img {
+    width: 100px;
+    height: 100px;
+    margin: 0.5em auto;
+  }
+
+  .beneficios-card h3 {
+    font-size: 1.2em;
+  }
+  /* contacto */
+  .contacto #nombre,
+  #email,
+  #telefono {
+    width: 359px;
+    height: 71px;
+    margin-bottom: 2em !important;
+    margin: 0 auto;
+  }
+  .contacto #mensaje {
+    width: 359px;
+    height: 305px;
+    margin-bottom: 2em !important;
+    margin: 0 auto;
+  }
+  /* footer */
+  .mi-footer {
+    height: 42em;
+  }
+  .mi-footer .container .row {
+    flex-direction: column; /* Cambia la dirección de la fila a columnas */
+  }
+}
