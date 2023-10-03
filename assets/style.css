@@ -82,14 +82,14 @@ h2 {
 }
 
 /*todos los botones - animacion*/
-button:hover {
+.hero button:hover {
   background-color: var(--Primary) !important;
   border: var(--Primary);
   color: var(--White) !important;
-  animation: showup 2s;
+  animation: showup 1.5s;
 }
 
-button:after {
+.hero button:after {
   display: block;
   position: absolute;
   margin: 0;
@@ -104,7 +104,31 @@ button:after {
   border-radius: 50%;
   background: transparent;
 }
-button:hover:after {
+.hero button:hover:after {
+  -webkit-animation: circle 1.1s ease-in forwards;
+}
+.contacto button:hover {
+  background-color: var(--Primary) !important;
+  border: var(--Primary);
+  color: var(--White) !important;
+  animation: showup 1.5s;
+}
+.contacto button:after {
+  display: block;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: ".";
+  color: transparent;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: transparent;
+}
+.contacto button:hover:after {
   -webkit-animation: circle 1.1s ease-in forwards;
 }
 
@@ -237,10 +261,7 @@ button:hover:after {
 }
 
 /* animación */
-.hero button:hover {
-  background-color: rgba(255, 255, 255, 0.758);
-  color: #15244dd1;
-}
+
 /* keyframe */
 @keyframes showup {
   0% {
@@ -307,7 +328,6 @@ button:hover:after {
   font-weight: 400;
   padding: 0.8em !important;
 }
-
 /* fin de negocios */
 
 /* degrade de fondo 2 */
@@ -368,7 +388,7 @@ button:hover:after {
 .beneficios {
   background-image: url("./img/beneficiosFondo.png");
   border-radius: 20px;
-  height: 442.815px;
+  height:580px;
   width: 1192.067px;
   margin: 0 auto;
 }
@@ -377,13 +397,13 @@ button:hover:after {
   display: grid;
   grid-template-columns: repeat(
     3,
-    400px
+    390px
   );
   grid-gap: 10px; 
   grid-template-rows: 389px; 
   margin-top: 4em;
   text-align: center;
-  padding-top: 6em;
+  padding-top: 8.5em;
 }
 
 .beneficios-card img {
@@ -419,11 +439,12 @@ button:hover:after {
   margin-top: -2em;
 }
 .beneficios-card > div:nth-child(1) {
-  margin-left: 6em;
+  margin-left: 5em;
 }
 .beneficios-card > div:nth-child(3) {
-  margin-left: 3em;
+  margin-left: 4em;
 }
+
 /* fin beneficios */
 
 /* degrade de fondo 3 */
@@ -532,8 +553,6 @@ form button {
 }
 /* fin footer */
 
-
-
 /* media */
 @media (max-width: 990px) {
   .degrade1 {
@@ -541,15 +560,20 @@ form button {
   }
   .degrade2 {
     margin-top: 8em !important;
-    height: 140em !important;
+    height: 130em !important;
   }
   .degrade3 {
-    height: 80em !important;
+    height: 70em !important;
+  }
+  h2 {
+    font-size: 1.5em !important;
+    margin: 0 auto;
   }
   /* navbar */
   .navbar-brand img {
-    width: 100px;
-    height: 33px;
+    width: 140px;
+    height: 60px;
+    margin-left: -4em !important;
   }
   .navbar-collapse {
     background-color: var(--White);
@@ -573,13 +597,13 @@ form button {
 
   /* hero */
   .hero {
-    height: auto;
+    height: 470px !important;
     padding: 1em;
   }
 
   .hero h1 {
     font-size: 1.8em !important;
-    margin-bottom: 0.8em;
+    margin-bottom: 0.6em;
   }
 
   .hero button {
@@ -587,8 +611,6 @@ form button {
     height: 42px;
     font-size: 0.6em !important;
   }
-
-
   /* negocios */
   .negocios {
     margin-bottom: 10em !important;
@@ -598,10 +620,7 @@ form button {
   #nosotros {
     margin-top: 20em !important;
   }
-  h2 {
-    font-size: 1.5em !important;
-    margin: 0 auto;
-  }
+ 
   .negocios .card {
     width: 355px;
     height: 609px;
@@ -635,42 +654,54 @@ form button {
     font-size: 0.8em;
     padding: 0.3em 0;
   }
+
   /* beneficios */
-  .beneficios {
-    background-image: none;
-  }
+.beneficios {
+  background-image: none;
+}
 
-  .beneficios-card {
-    background-image: url("./img/fondo-responsive.png");
-    padding-left: 1em;
-    width: 100vw;
-    height: 600px;
-    background-repeat: no-repeat;
-    display: block;
-    padding: 1em !important;
-  }
+.beneficios-card {
+  background-image: url("./img/fondo-responsive.png");
+  width: 100vw;
+  background-repeat: no-repeat;
+  display: block; 
+  text-align: center;
+  padding: 1em !important;
+  
+}
 
-  .beneficios-card > div {
-    height: 10em !important;
-    background-color: transparent !important;
-    text-align: center;
-    padding: 1em;
-    margin-left: 0;
-  }
-  .beneficios-card > div:nth-child(2) {
-    text-align: center;
-  }
+.beneficios-card > div {
 
-  .beneficios-card img {
-    width: 100px;
-    height: 100px;
-    margin: 0.5em auto;
-  }
+  width: 100vw; 
+  height: auto !important;
+  background-color: transparent !important; 
+  box-shadow: none;
+  border-radius: 0; 
+ margin-bottom: 0.2em;
+}
+.beneficios-card > div:nth-child(1),
+.beneficios-card > div:nth-child(2),
+.beneficios-card > div:nth-child(3){
+  width: 30em;
+  margin: 0 auto; 
+}
+.beneficios-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.4em;
+}
 
-  .beneficios-card h3 {
-    font-size: 1.2em;
-  }
+.beneficios-card h3 {
+  font-size: 1em;
+  text-align: center;
+  margin: 0; /* Quitamos el margen superior e inferior */
+}
+
   /* contacto */
+  .contacto h4{
+    font-size: 1.3em !important;
+    padding: 0 1em;
+  }
   .contacto #nombre,
   #email,
   #telefono {
