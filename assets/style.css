@@ -11,12 +11,12 @@ html {
   --White: #ffffff;
   --Primary: #15244d;
   --VariableColor: #3283c1;
+  --base-font-size: 1em;
 }
 /* body */
 body {
   font-family: "Poppins", sans-serif !important;
   line-height: 1.5;
-  text-align: left;
   background: var(--Primary) !important;
 }
 /* todos los h2 y su animacion */
@@ -50,7 +50,7 @@ h2 {
 }
 @-webkit-keyframes reveal {
   80% {
-    letter-spacing: 6px;
+    letter-spacing: 0.375em;
   }
   100% {
     background-size: 200% 200%;
@@ -58,20 +58,10 @@ h2 {
 }
 @keyframes reveal {
   80% {
-    letter-spacing: 6px;
+    letter-spacing: 0.375em;
   }
   100% {
     background-size: 200% 200%;
-  }
-}
-@-webkit-keyframes glow {
-  40% {
-    text-shadow: 0 0 8px #fff;
-  }
-}
-@keyframes glow {
-  40% {
-    text-shadow: 0 0 8px #fff;
   }
 }
 
@@ -99,8 +89,8 @@ h2 {
   right: 0;
   content: ".";
   color: transparent;
-  width: 1px;
-  height: 1px;
+  width: 0.00625em;
+  height: 0.00625em;
   border-radius: 50%;
   background: transparent;
 }
@@ -123,8 +113,8 @@ h2 {
   right: 0;
   content: ".";
   color: transparent;
-  width: 1px;
-  height: 1px;
+  width: 0.00625em;
+  height: 0.00625em;
   border-radius: 50%;
   background: transparent;
 }
@@ -135,7 +125,7 @@ h2 {
 /* navbar */
 .navbar {
   background: var(--White, #fff);
-  box-shadow: 0px 10px 50px 0px rgba(21, 36, 77, 0.67);
+  box-shadow: 0em 0.625em 3.125em 0em rgba(21, 36, 77, 0.67);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -176,8 +166,8 @@ h2 {
   right: 0;
   content: ".";
   color: transparent;
-  width: 1px;
-  height: 1px;
+  width: 0.00625em;
+  height: v;
   border-radius: 50%;
   background: transparent;
 }
@@ -187,13 +177,13 @@ h2 {
 /* Keyframes */
 @-webkit-keyframes circle {
   0% {
-    width: 1px;
+    width: 0.00625em;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     margin: auto;
-    height: 1px;
+    height: 0.00625em;
     z-index: -1;
     background: var(--Primary);
     border-radius: 100%;
@@ -224,7 +214,7 @@ h2 {
 .hero {
   text-align: center;
   background-image: url("./img/hero.png");
-  height: 552px;
+  height: 34.5em;
   width: 100vw;
 }
 
@@ -245,10 +235,10 @@ h2 {
 
 .hero button {
   background-color: var(--White, #fff);
-  box-shadow: 0px 10px 50px rgba(0, 59, 121, 0.07);
+  box-shadow:  0em 0.625em 3.125em 0em rgba(0, 59, 121, 0.07);
   width: 21em;
   height: 4em;
-  border-radius: 20px;
+  border-radius: 1.25em;
   border-color: var(--White);
   text-align: center;
   color: var(--Primary);
@@ -296,11 +286,11 @@ h2 {
   padding: 8em 6em !important;
 }
 .negocios .card {
-  max-width: 1197px;
+  max-width: 74.8em;
   background-color: var(--White);
-  box-shadow: 0px 10px 50px rgba(0, 59, 121, 0.07);
-  border-radius: 20px;
-  height: 513px;
+  box-shadow:  0em 0.625em 3.125em 0em rgba(0, 59, 121, 0.07);
+  border-radius: 1.25em;
+  height: 32.96em;
   padding: 2em 4em !important;
   align-items: center;
 }
@@ -360,7 +350,7 @@ h2 {
   font-size: 1em;
 }
 .nosotros .card {
-  border-radius: 20px;
+  border-radius: 1.25em;
   width: 30em;
   height: 14em;
   margin: 3em 8em;
@@ -370,8 +360,8 @@ h2 {
 
 .nosotros .card img {
   animation: showup 45s infinite;
-  width: 115px;
-  height: 116.53px;
+  width: 7.18em;
+  height: 7.28em;
 }
 #card-nosotros .card {
   display: flex;
@@ -387,9 +377,9 @@ h2 {
 
 .beneficios {
   background-image: url("./img/beneficiosFondo.png");
-  border-radius: 20px;
-  height:580px;
-  width: 1192.067px;
+  border-radius:1.25em;
+  height:36.25em;
+  width: 74.5em;
   margin: 0 auto;
 }
 
@@ -397,10 +387,10 @@ h2 {
   display: grid;
   grid-template-columns: repeat(
     3,
-    390px
+    24.375em
   );
-  grid-gap: 10px; 
-  grid-template-rows: 389px; 
+  grid-gap: 0.625em; 
+  grid-template-rows: 24.31em; 
   margin-top: 4em;
   text-align: center;
   padding-top: 8.5em;
@@ -408,8 +398,8 @@ h2 {
 
 .beneficios-card img {
   margin: 3em;
-  width: 115px;
-  height: 115px;
+  width: 7.18em;
+  height:  7.18em;
   animation: showup 45s infinite;
 }
 
@@ -418,23 +408,33 @@ h2 {
   font-size: 2em;
   font-weight: 600;
   animation: showup 45s infinite;
+  display: block;
+}
+
+.beneficios-card h3:hover {
+ 
+  font-size: 2.5em;
+}
+.beneficios-card img:hover {
+  width: 9em;
+  height:  9em;
 }
 
 .beneficios-card > div:nth-child(1),
 .beneficios-card > div:nth-child(3) {
-  border-radius: 20px !important;
-  width: 326px;
-  height: 343px;
+  border-radius: 1.25em !important;
+  width: 20.375em;
+  height: 21.43em;
   background-color: #ffffff54;
-  box-shadow: 0px 10px 50px rgba(0, 59, 121, 0.07);
+  box-shadow: 0em 0.625em 3.125em 0em rgba(0, 59, 121, 0.07);
 }
 
 .beneficios-card > div:nth-child(2) {
-  width: 469px;
-  border-radius: 20px !important;
-  height: 375px;
+  width: 29.31em;
+  border-radius: 1.25em !important;
+  height: 23.43em;
   background-color: #ffffff54;
-  box-shadow: 0px 10px 50px rgba(0, 59, 121, 0.07);
+  box-shadow: 0em 0.625em 3.125em 0em rgba(0, 59, 121, 0.07);
   z-index: 3;
   margin-top: -2em;
 }
@@ -474,15 +474,15 @@ h2 {
 .contacto form ::placeholder {
   color: var(--Primary);
   font-size: 1em;
-  width: 488px;
-  height: 71px;
+  width: 30.5em;
+  height: 4.43em;
   font-weight: 300;
 }
 form button {
   margin-top: 2em;
   background-color: var(--White, #fff);
-  box-shadow: 0px 10px 50px rgba(0, 59, 121, 0.07);
-  border-radius: 20px;
+  box-shadow:  0em 0.625em 3.125em 0em rgba(0, 59, 121, 0.07);
+  border-radius: 1.25em;
   width: 21em;
   height: 4em;
   font-size: 1em;
@@ -500,12 +500,12 @@ form button {
   width: 30em;
   height: 4em;
   margin-bottom: 2em;
-  border-radius: 20px;
+  border-radius: 1.25em;
 }
 .contacto #mensaje {
   width: 38em;
   height: 16em;
-  border-radius: 20px;
+  border-radius: 1.25em;
   margin-bottom: 2em !important;
 }
 /* fin contacto */
@@ -513,7 +513,7 @@ form button {
 /* footer */
 .mi-footer {
   background: var(--White, #fff);
-  box-shadow: 0px -9px 30px 0px #15244d;
+  box-shadow: 0em -0.56em 1.875em 0em #15244d;
   width: 100%;
   height: 25em;
   margin-top: 4em !important;
@@ -541,9 +541,8 @@ form button {
 .mi-footer p {
   color: var(--Background, #848e96);
   font-size: 1em;
-
   font-weight: 400;
-  margin-top: 5px;
+  margin-top: 0.01em;
 }
 .mi-footer .container .row {
   flex-direction: row;
@@ -554,36 +553,46 @@ form button {
 /* fin footer */
 
 /* media */
-@media (max-width: 990px) {
+@media (max-width: 61.875em) {
+  body{
+   
+    width: 100vw;
+    height: auto;
+  }
   .degrade1 {
+   
     height: 120em !important;
   }
   .degrade2 {
+    overflow: hidden;
     margin-top: 8em !important;
     height: 130em !important;
   }
   .degrade3 {
+    overflow: hidden;
     height: 70em !important;
   }
   h2 {
+    overflow: hidden;
     font-size: 1.5em !important;
     margin: 0 auto;
   }
   /* navbar */
   .navbar-brand img {
-    width: 140px;
-    height: 60px;
+    overflow: hidden;
+    width: 8.75em;
+    height: 3.75em;
     margin-left: -4em !important;
   }
   .navbar-collapse {
     background-color: var(--White);
     padding: 1em;
     position: absolute;
-    top: 55px;
+    top: 3.43em;
     right: 0;
     left: 0;
     z-index: 1000;
-    border-bottom: 1px solid var(--Primary);
+    border-bottom: 0.00625 solid var(--Primary);
     padding-left: -4em !important;
   }
 
@@ -597,7 +606,8 @@ form button {
 
   /* hero */
   .hero {
-    height: 470px !important;
+    overflow: hidden;
+    height: 29.375 !important;
     padding: 1em;
   }
 
@@ -607,8 +617,8 @@ form button {
   }
 
   .hero button {
-    width: 210px;
-    height: 42px;
+    width: 13.125em;
+    height: 2.625e,;
     font-size: 0.6em !important;
   }
   /* negocios */
@@ -622,8 +632,8 @@ form button {
   }
  
   .negocios .card {
-    width: 355px;
-    height: 609px;
+    width: 22.18em;
+    height: 38.0625em;
     padding: 0 !important;
     margin: 0 auto;
   }
@@ -637,8 +647,8 @@ form button {
   }
 
   .card .col-md-6 img {
-    width: 278px;
-    height: 211px;
+    width: 17.375em;
+    height: 13.18em;
     margin: 0 auto;
   }
 
@@ -661,7 +671,7 @@ form button {
 }
 
 .beneficios-card {
-  background-image: url("./img/fondo-responsive.png");
+  /* background-image: url("./img/fondo-responsive.png"); */
   width: 100vw;
   background-repeat: no-repeat;
   display: block; 
@@ -677,7 +687,7 @@ form button {
   background-color: transparent !important; 
   box-shadow: none;
   border-radius: 0; 
- margin-bottom: 0.2em;
+
 }
 .beneficios-card > div:nth-child(1),
 .beneficios-card > div:nth-child(2),
@@ -686,8 +696,8 @@ form button {
   margin: 0 auto; 
 }
 .beneficios-card img {
-  width: 60px;
-  height: 60px;
+  width: 3.75em;
+  height: 3.75em;
   margin-bottom: 0.4em;
 }
 
@@ -705,20 +715,20 @@ form button {
   .contacto #nombre,
   #email,
   #telefono {
-    width: 359px;
-    height: 71px;
+    width: 22.43em;
+    height: 4.43em;
     margin-bottom: 2em !important;
     margin: 0 auto;
   }
   .contacto #mensaje {
-    width: 359px;
-    height: 305px;
+    width: 22.43em;
+    height: 19.0625em;
     margin-bottom: 2em !important;
     margin: 0 auto;
   }
   /* footer */
   .mi-footer {
-    height: 42em;
+    height: 40em;
   }
   .mi-footer .container .row {
     flex-direction: column; /* Cambia la dirección de la fila a columnas */
