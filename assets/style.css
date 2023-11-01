@@ -208,6 +208,17 @@ h2 {
 .navbar-toggler-icon {
   background-color: var(--Primary);
 }
+/* Agrega los estilos CSS necesarios para mostrar y ocultar el menú */
+/* Asegúrate de que los estilos para mostrar y ocultar el menú estén como se describe a continuación en tu archivo CSS. */
+
+.navbar-collapse {
+  display: none;
+}
+
+.navbar-collapse.show {
+  display: block;
+}
+
 /* fin navbar */
 
 /* hero */
@@ -412,7 +423,6 @@ h2 {
 }
 
 .beneficios-card h3:hover {
- 
   font-size: 2.5em;
 }
 .beneficios-card img:hover {
@@ -561,12 +571,12 @@ form button {
   }
   .degrade1 {
    
-    height: 120em !important;
+    height: 106em !important;
   }
   .degrade2 {
     overflow: hidden;
     margin-top: 8em !important;
-    height: 130em !important;
+    height: 166em !important;
   }
   .degrade3 {
     overflow: hidden;
@@ -583,6 +593,18 @@ form button {
     width: 8.75em;
     height: 3.75em;
     margin-left: -4em !important;
+  }
+  .navbar-collapse {
+    display: none;
+  }
+
+  .navbar-collapse.active {
+    display: block;
+  }
+
+  .navbar-toggle-container {
+    display: block;
+    cursor: pointer;
   }
   .navbar-collapse {
     background-color: var(--White);
@@ -622,6 +644,10 @@ form button {
     font-size: 0.6em !important;
   }
   /* negocios */
+  .negocios .container{
+   
+      padding: 1em !important;
+  }
   .negocios {
     margin-bottom: 10em !important;
     padding: 5em 0em !important;
@@ -630,7 +656,18 @@ form button {
   #nosotros {
     margin-top: 20em !important;
   }
- 
+  .nosotros .card {
+    border-radius: 1.25em;
+    width: 22em;
+    height: 21em;
+  }
+  #card-nosotros .card-title {
+    text-align: initial !important;
+    font-size: 1em !important;
+}
+  #card-nosotros .card-text {
+    font-size: 0.8em;
+}
   .negocios .card {
     width: 22.18em;
     height: 38.0625em;
@@ -668,6 +705,7 @@ form button {
   /* beneficios */
 .beneficios {
   background-image: none;
+
 }
 
 .beneficios-card {
@@ -677,7 +715,7 @@ form button {
   display: block; 
   text-align: center;
   padding: 1em !important;
-  
+  margin-top: -2em;
 }
 
 .beneficios-card > div {
@@ -687,12 +725,13 @@ form button {
   background-color: transparent !important; 
   box-shadow: none;
   border-radius: 0; 
+  
 
 }
 .beneficios-card > div:nth-child(1),
 .beneficios-card > div:nth-child(2),
 .beneficios-card > div:nth-child(3){
-  width: 30em;
+  width: 23em;
   margin: 0 auto; 
 }
 .beneficios-card img {
@@ -704,7 +743,15 @@ form button {
 .beneficios-card h3 {
   font-size: 1em;
   text-align: center;
-  margin: 0; /* Quitamos el margen superior e inferior */
+  margin: 0; 
+}
+
+.beneficios-card h3:hover{
+  font-size: 1.2em;
+}
+.beneficios-card img:hover{
+  width: 4em;
+  height: 4em;
 }
 
   /* contacto */
@@ -730,6 +777,10 @@ form button {
   .mi-footer {
     height: 40em;
   }
+  .mi-footer .card-body {
+   
+    padding: 1em !important;
+}
   .mi-footer .container .row {
     flex-direction: column; /* Cambia la dirección de la fila a columnas */
   }
