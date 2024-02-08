@@ -637,7 +637,7 @@ h2 {
 }
 .contacto form {
   margin-top: 3em !important;
-  margin-left: 8em;
+  margin-left: 6em;
 }
 .contacto form ::placeholder {
   color: var(--Primary);
