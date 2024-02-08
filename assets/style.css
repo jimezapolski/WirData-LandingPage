@@ -357,6 +357,7 @@ h2 {
 #card-nosotros {
   display: flex;
   justify-content: center;
+  margin-left: 10em;
 }
 
 #card-nosotros .card-title {
@@ -636,6 +637,7 @@ h2 {
 }
 .contacto form {
   margin-top: 3em !important;
+  margin-left: 8em;
 }
 .contacto form ::placeholder {
   color: var(--Primary);
