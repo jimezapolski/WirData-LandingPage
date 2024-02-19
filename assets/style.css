@@ -357,8 +357,21 @@ h2 {
 #card-nosotros {
   display: flex;
   justify-content: center;
-  margin-left: 10em;
+
 }
+@media screen and (max-width: 1300px) {
+  #card-nosotros {
+    margin-left: 0em !important;
+  }
+ 
+}
+@media only screen and (min-width: 1300) and (max-width: 1900px) {
+  #card-nosotros {
+    margin-left: -8em !important;
+  }
+ 
+}
+
 
 #card-nosotros .card-title {
   text-align: initial !important;
@@ -639,6 +652,17 @@ h2 {
   margin-top: 3em !important;
   margin-left: 4em;
 }
+
+@media screen and (max-width: 1300px) {
+  .contacto form  {
+    margin-left: -10em !important;
+  }
+  #izquierda{
+    margin-left: 4em !important;
+  }
+ 
+}
+
 .contacto form ::placeholder {
   color: var(--Primary);
   font-size: 1em;
