@@ -359,15 +359,15 @@ h2 {
   justify-content: center;
 
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1600px) {
   #card-nosotros {
     margin-left: 0em !important;
   }
  
 }
-@media only screen and (min-width: 1300) and (max-width: 1900px) {
+@media only screen and (min-width: 1600px){
   #card-nosotros {
-    margin-left: -8em !important;
+    margin-left: 6em !important;
   }
  
 }
@@ -650,15 +650,23 @@ h2 {
 }
 .contacto form {
   margin-top: 3em !important;
-  margin-left: 4em;
-}
 
-@media screen and (max-width: 1300px) {
-  .contacto form  {
-    margin-left: -10em !important;
+}
+@media screen and (max-width: 1600px) {
+  #mover {
+    margin-left: 3em !important;
   }
   #izquierda{
-    margin-left: 4em !important;
+    margin-left: 3em !important;
+  }
+
+}
+@media screen and (min-width: 1600px) {
+  #mover {
+    margin-left: 14em !important;
+  }
+  #izquierda{
+    margin-left: 8em !important;
   }
  
 }
@@ -853,6 +861,15 @@ form button {
 }
   #card-nosotros .card-text {
     font-size: 0.8em;
+}
+#card-nosotros {
+  margin-left: 3em !important;
+}
+#mover {
+  margin-left: 0em !important;
+}
+#izquierda{
+  margin-left: 0em !important;
 }
   .negocios .card {
     width: 22.18em;
