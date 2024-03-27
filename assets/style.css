@@ -16,6 +16,7 @@ html {
 }
 /* body */
 body {
+  padding: 0;
   font-family: "Poppins", sans-serif !important;
   line-height: 1.5;
   background: var(--Primary) !important;
@@ -82,21 +83,6 @@ h2 {
  
 }
 
-/* .hero button:after {
-  display: block;
-  position: absolute;
-  margin: 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  content: ".";
-  color: transparent;
-  width: 0.00625em;
-  height: 0.00625em;
-  border-radius: 50%;
-  background: transparent;
-} */
 .hero button:hover:after {
   -webkit-animation: circle 1.1s ease-in forwards;
 }
@@ -106,24 +92,6 @@ h2 {
   color: var(--White) !important;
  
  }
- /*  
-.contacto button:after {
-  display: block;
-  position: absolute;
-  margin: 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  content: ".";
-  color: transparent;
-  width: 0.00625em;
-  height: 0.00625em;
-  border-radius: 50%;
-  background: transparent;
-} */
-
-
 /* navbar */
 .navbar {
   margin-right: 0 !important;
@@ -133,10 +101,6 @@ h2 {
 .navbar {
   background: var(--White, #fff);
   box-shadow: 0em 0.625em 3.125em 0em rgba(21, 36, 77, 0.67);
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center; */
 }
 .navbar-brand {
   padding-left: 6em !important;
@@ -215,9 +179,6 @@ h2 {
 .navbar-toggler-icon {
   background-color: var(--Primary);
 }
-/* Agrega los estilos CSS necesarios para mostrar y ocultar el menú */
-/* Asegúrate de que los estilos para mostrar y ocultar el menú estén como se describe a continuación en tu archivo CSS. */
-
 .navbar-collapse {
   display: none;
 }
@@ -225,7 +186,6 @@ h2 {
 .navbar-collapse.show {
   display: block;
 }
-
 /* fin navbar */
 
 /* hero */
@@ -267,7 +227,6 @@ h2 {
   margin: 0 auto;
   cursor: pointer;
 }
-
 /* animación */
 
 /* keyframe */
@@ -628,7 +587,6 @@ h2 {
 
 
 /* Media Queries */
-
 @media (max-width: 768px) {
   .slick-arrow {
     width: 1rem;
@@ -778,6 +736,9 @@ form button {
     margin: 0 auto;
   }
   /* navbar */
+  .navbar{
+    font-size: 1em;
+  }
   .navbar-brand img {
     overflow: hidden;
     width: 8.75em;
@@ -863,7 +824,7 @@ form button {
     font-size: 0.8em;
 }
 #card-nosotros {
-  margin-left: 3em !important;
+  margin-left: 0em !important;
 }
 #mover {
   margin-left: 0em !important;
@@ -1003,4 +964,75 @@ form button {
     width: 15em;
     padding: 1em 0em;
 }
+}
+@media (min-width:48px) and (max-width: 768px) {
+  #card-nosotros {
+    margin-left: 5em !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Estilos para tablet */
+
+  /* Estilos para slick-arrow */
+  .slick-arrow {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+
+
+  /* Estilos para .Confian .row */
+  .Confian .row {
+    overflow: hidden;
+  }
+
+  /* Estilos para el formulario de contacto */
+  .contacto h4 {
+    font-size: 1.3em !important;
+    padding: 0 1em;
+  }
+  .contacto #nombre,
+  #email,
+  #telefono {
+    width: 22.43em;
+    height: 4.43em;
+    margin-bottom: 2em !important;
+    margin: 0 auto;
+  }
+  .contacto #mensaje {
+    width: 22.43em;
+    height: 19.0625em;
+    margin-bottom: 2em !important;
+    margin: 0 auto;
+  }
+
+  /* Estilos para el footer */
+  .mi-footer {
+    height: 40em;
+  }
+  .mi-footer .card-body {
+    padding: 1em !important;
+  }
+  .mi-footer .container .row {
+    flex-direction: column;
+  }
+
+  /* Estilos para los testimonios */
+  .cardTestimonios {
+    height: 35em;
+    width: 22em;
+    padding: 1em !important;
+  }
+  .figcaption-flex {
+    flex-direction: column-reverse; 
+    align-items: center; 
+    margin: 0;
+  }
+  .figcaption-flex img {
+    margin-top: 1.5em;     
+    width: 15em;
+    padding: 1em 0em;
+  }
+
 }
